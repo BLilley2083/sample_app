@@ -19,7 +19,7 @@ def secure_token
 		File.read(token_file).chomp
 	else
 		#generate a new token and store it in token_file
-		token = Securerandom.hex(64)
+		token = SecureRandom.hex(64)
 		File.write(token_file, token)
 		token
 	end
